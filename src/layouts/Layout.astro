@@ -1,5 +1,8 @@
 ---
 import Header from "../components/Header.astro";
+import "@fontsource/ibm-plex-mono";
+import "@fontsource/ubuntu";
+import Separator from "../components/Separator.astro";
 
 interface Props {
   title: string;
@@ -14,14 +17,17 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <Header />
-  <body>
-    <slot />
-  </body>
+  <div class="container mx-auto px-4">
+    <Separator />
+    <body>
+      <slot />
+    </body>
+  </div>
 
   <style is:global>
     :root {
@@ -31,6 +37,12 @@ const { title } = Astro.props;
       font-family: system-ui, sans-serif;
       background: #13151a;
       background-size: 224px;
+
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    .container {
+      max-width: 90%;
     }
 
     body {
@@ -41,5 +53,19 @@ const { title } = Astro.props;
       cursor: pointer;
       list-style: none;
     }
+
+    h1 {
+      font-family: "Ubuntu", sans-serif;
+    }
+
+    p {
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    button {
+      font-family: "Ubuntu", sans-serif;
+    }
   </style>
+
+
 </html>
