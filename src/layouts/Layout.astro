@@ -23,11 +23,12 @@ const { title } = Astro.props;
   </head>
   <Header />
   <div class="container mx-auto px-4">
-    <Separator />
-    <body>
-      <slot />
-    </body>
+    <Separator class="w-90" />
   </div>
+
+  <body>
+    <slot />
+  </body>
 
   <style is:global>
     :root {
@@ -54,7 +55,8 @@ const { title } = Astro.props;
       list-style: none;
     }
 
-    h1 {
+    h1,
+    h2 {
       font-family: "Ubuntu", sans-serif;
     }
 
