@@ -2,20 +2,47 @@
 import GitHubIcon from "../icons/GitHub.astro";
 import InstagramIcon from "../icons/Instagram.astro";
 import LinkedInIcon from "../icons/LinkedIn.astro";
+import CodeIcon from "../icons/Code.astro";
 ---
 
-<nav class="flex">
-  <li><a href="/">Home</a></li>
-  <div>
-    <InstagramIcon />
-    <a href="https://www.instagram.com">Instagram</a>
+<div class="flex justify-between py-8 mx-16">
+  <div class="flex px-12 items-center">
+    <CodeIcon class="mx-2 size-7" />
+    <p>Eduardo Valencia</p>
   </div>
-  <div>
-    <GitHubIcon />
-    <a href="https://github.com">GitHub</a>
-  </div>
-  <div>
-    <LinkedInIcon />
-    <a href="https://www.linkedin.com">LinkedIn</a>
-  </div>
-</nav>
+  <nav class="flex items-center mx-16">
+    <span>
+      <a
+        href="https://www.instagram.com/"
+        class="flex px-3 text-s items-center text-xs transition-transform 200ms ease-in-out hover:scale-110 hover:text-[#12F7D6]"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <InstagramIcon class="size-3 mx-2" />
+        Instagram
+      </a>
+    </span>
+    <span>
+      <a
+        href="https://github.com/"
+        class="flex px-3 text-s items-center text-xs transition-transform 200ms ease-in-out hover:scale-110 hover:text-[#12F7D6]"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <GitHubIcon class="size-3 mx-2" />
+        GitHub
+      </a>
+    </span>
+    <span>
+      <a
+        href="https://www.linkedin.com/"
+        class="flex px-3 r text-s items-center text-xs transition-transform 200ms ease-in-out hover:scale-110 hover:text-[#12F7D6]"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <LinkedInIcon class="size-3 mx-2" />
+        LinkedIn
+      </a>
+    </span>
+  </nav>
+</div>
