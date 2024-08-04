@@ -4,6 +4,10 @@ import Layout from "../layouts/Layout.astro";
 import Mail from "../icons/Mail.astro";
 import Work from "../icons/Work.astro";
 import Location from "../icons/Location.astro";
+import H1 from "../icons/H1.astro";
+import H1_ from "../icons/H1_.astro";
+import P from "../icons/P.astro";
+import P_ from "../icons/P_.astro";
 ---
 
 <style>
@@ -13,7 +17,7 @@ import Location from "../icons/Location.astro";
 </style>
 
 <Layout title="Eduardo Valencia - Portfolio">
-  <main class="h-fit pb-12">
+  <main class="h-fit pb-20">
     <div>
       <h1 class="flex justify-center mx-auto text-[#98FAEC] text-8xl my-11">
         Developer
@@ -38,18 +42,30 @@ import Location from "../icons/Location.astro";
         </p>
 
         <div class="mt-6">
-          <a class="flex text-xs mb-3" href="mailto:EduardoVG@proton.me">
+          <a
+            class="flex text-xs mb-3"
+            href="mailto:EduardoVG@proton.me"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <Mail class="size-4 mr-3" />
             EduardoVG@proton.me
           </a>
           <a
             class="flex text-xs mb-3"
             href="https://maps.app.goo.gl/xovWGKrJXmpGXnFx9"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             <Location class="size-4 mr-3 text-[#12F7D6]" />
             México
           </a>
-          <a class="flex text-xs mb-5" href="https://www.linkedin.com/">
+          <a
+            class="flex text-xs mb-5"
+            href="https://www.linkedin.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <Work class="size-4 mr-3 text-[#12F7D6]" />
             Available for work
           </a>
@@ -118,17 +134,25 @@ import Location from "../icons/Location.astro";
         </button>
       </div>
 
-      <div class="size-96 w-[600px] font-thin">
+      <div class="relative size-96 w-[600px] font-thin mt-4">
+        <H1 class="absolute left-[-15px] top-[-10px]" />
         <p class="text-6xl font-ubuntu leading-tight">
           Hey <br /> I'm <span class="highlight">Eduardo</span>, <br /> Front-End
           Developer
         </p>
-        <p class="mt-16">
-          I help business grow by crafting amazing web experiences. If you're
-          looking for a developer that likes to get stuff done.
-        </p>
+        <H1_ class="absolute right-0 mb-16" />
 
-        <p class="flex text-2xl items-center text-[#12F7D6] font-bold mt-8">
+        <div class="mt-14 relative">
+          <P class="mb-4 absolute left-[-15px]" />
+          <p class="py-6">
+            I help business grow by crafting amazing web experiences. If you're
+            looking for a developer that likes to get stuff done.
+            <P_ class="mt-4 absolute left-[-15px]" />
+          </p>
+        </div>
+        <p
+          class="flex text-2xl items-center text-[#12F7D6] font-bold mt-8 pb-12"
+        >
           Lets Talk!
 
           <a
