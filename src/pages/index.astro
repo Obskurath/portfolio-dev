@@ -21,6 +21,7 @@ import Projects from "../icons/Projects.astro";
 import Line2 from "../icons/Line2.astro";
 import Send from "../icons/Send.astro";
 import Badge from "../components/Badge.astro";
+import InfoPill from "../components/InfoPill.astro";
 ---
 
 <style>
@@ -60,33 +61,21 @@ import Badge from "../components/Badge.astro";
           </p>
 
           <div class="mt-6">
-            <a
-              class="flex text-xs mb-3"
-              href="mailto:EduardoVG@proton.me"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
+            <InfoPill href="mailto:EduardoVG@proton.me">
               <Mail class="size-4 mr-3 text-[#12F7D6]" />
               EduardoVG@proton.me
-            </a>
-            <a
-              class="flex text-xs mb-3"
-              href="https://maps.app.goo.gl/xovWGKrJXmpGXnFx9"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
+            </InfoPill>
+
+            <InfoPill href="https://maps.app.goo.gl/xovWGKrJXmpGXnFx9">
               <Location class="size-4 mr-3 text-[#12F7D6]" />
               México
-            </a>
-            <a
-              class="flex text-xs mb-5"
-              href="https://www.linkedin.com/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
+            </InfoPill>
+
+            <InfoPill href="https://www.linkedin.com/">
               <Work class="size-4 mr-3 text-[#12F7D6]" />
-              Available for work
-            </a>
+              Available for Work
+            </InfoPill>
+
             <div class="flex">
               <Badge> HTML </Badge>
               <Badge> CSS </Badge>
