@@ -8,11 +8,27 @@ import H1 from "../icons/H1.astro";
 import H1_ from "../icons/H1_.astro";
 import P from "../icons/P.astro";
 import P_ from "../icons/P_.astro";
+import FrontEnd from "../icons/Front-End.astro";
+import BackEnd from "../icons/Back-End.astro";
+import App from "../icons/App.astro";
+import HTML from "../icons/HTML.astro";
+import CSS from "../icons/CSS.astro";
+import JS from "../icons/JS.astro";
+import REACT from "../icons/REACT.astro";
+import Code from "../icons/Code.astro";
+import Line from "../icons/Line.astro";
+import Projects from "../icons/Projects.astro";
+import Line2 from "../icons/Line2.astro";
+import Send from "../icons/Send.astro";
 ---
 
 <style>
   .highlight {
     color: #12f7d6;
+  }
+
+  #textarea {
+    resize: none;
   }
 </style>
 
@@ -235,12 +251,115 @@ import P_ from "../icons/P_.astro";
 
   <section
     id="skills"
-    class="bg-cover bg-center h-dvh"
+    class="bg-cover bg-center h-dvh grid place-items-center text-center relative"
     style="background-image: url(/img/skills-bg.png);"
   >
+    <Code class="absolute top-[7%] size-24" />
+
+    <div>
+      <h3 class="text-6xl text-[#12F7D6] mt-32">Skills</h3>
+      <Line class="mx-auto mb-3 mt-1" />
+      <p>I am striving to never stop learning and improving ;)</p>
+    </div>
+    <div class="grid grid-cols-3 gap-10 place-items-center">
+      <div
+        class="flex flex-col items-center bg-[#98FAEC] text-black p-4 text-xs rounded-xl w-[200px]"
+      >
+        <FrontEnd />
+        <p class="text-base">Front-End</p>
+        <p>HTML CSS JS REACT</p>
+      </div>
+
+      <div
+        class="flex flex-col items-center bg-[#98FAEC] text-black p-4 text-xs rounded-xl w-[200px]"
+      >
+        <App />
+        <p class="text-base">App Developement</p>
+        <p>Coming Soon!</p>
+      </div>
+
+      <div
+        class="flex flex-col items-center bg-[#98FAEC] text-black p-4 text-xs rounded-xl w-[200px]"
+      >
+        <BackEnd />
+        <p class="text-base">Back-End</p>
+        <p>Coming Soon!</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-4 gap-20 mb-10">
+      <HTML class="h-auto w-24" />
+      <CSS class="h-auto w-24" />
+      <JS class="h-auto w-24" />
+      <REACT class="h-auto w-24" />
+    </div>
   </section>
-
-  <section id="Projects"></section>
-
-  <section id="contact"></section>
 </Layout>
+
+<section
+  id="Projects"
+  class="bg-cover bg-center h-dvh grid place-items-center text-center relative"
+  style="background-image: url(/img/projects-bg.png);"
+>
+  <div class="w-full">
+    <h3 class="text-6xl text-[#12F7D6] mt-16">Projects</h3>
+    <Line2 class="mx-auto mb-3 mt-1" />
+    <p>I had the pleasure of working with these awesome projects</p>
+  </div>
+</section>
+
+<section
+  id="contact"
+  class="bg-[#292f36] h-dvh grid place-items-center text-center"
+>
+  <div>
+    <h4 class="text-6xl text-[#12F7D6] mt-32">Contact</h4>
+    <Line2 class="mx-auto mb-3 mt-1" />
+    <p>I'm currently available for freelance work</p>
+  </div>
+  <h5
+    class="bg-[#292f36] h-14 w-fit text-2xl border-2 rounded-tl-[25px] rounded-br-[25px] border-[#12F7D6] px-8 flex items-center mt-16 mb-16 text-[#12F7D6]"
+  >
+    Send Me A Message
+  </h5>
+  <div class="grid grid-cols-2 gap-x-32 w-[800px]">
+    <div class="">
+      <p class="text-xs text-[#12f7d6] text-start my-2">Your name*</p>
+      <input
+        type="text"
+        required
+        placeholder="Enter your name"
+        class="bg-[#292f36] text-sm p-2 mb-4 border-b-2 border-[#12F7D6] focus:outline-none focus:ring-0 w-full"
+      />
+    </div>
+    <div>
+      <p class="text-xs text-[#12F7D6] text-start my-2">Your email*</p>
+      <input
+        type="text"
+        required
+        placeholder="Enter your email"
+        class="bg-[#292f36] text-sm p-2 mb-4 border-b-2 border-[#12F7D6] focus:outline-none focus:ring-0 w-full"
+      />
+    </div>
+
+    <div class="grid-cols-subgrid col-span-2">
+      <p class="text-xs text-[#12F7D6] text-start my-2">Your message*</p>
+      <textarea
+        name=""
+        value=""
+        required
+        id="textarea"
+        cols="30"
+        rows="1"
+        placeholder="Enter your needs"
+        class="bg-[#292f36] text-sm p-2 grid-cols-subgrid col-span-2 border-b-2 border-[#12F7D6] focus:outline-none focus:ring-0 w-full"
+      ></textarea>
+    </div>
+    <button
+      class="bg-[#12F7D6] text-[#292f36] rounded-[20px] py-2 px-4 w-fit mx-auto flex items-center justify-center gap-x-2 text-sm my-10 mb-6 grid-cols-subgrid col-span-2"
+    >
+      Send Message
+      <Send class="size-4" />
+    </button>
+  </div>
+</section>
