@@ -3,6 +3,7 @@ import GitHubIcon from "../icons/GitHub.astro";
 import InstagramIcon from "../icons/Instagram.astro";
 import LinkedInIcon from "../icons/LinkedIn.astro";
 import CodeIcon from "../icons/Code.astro";
+import SocialPill from "./SocialPill.astro";
 ---
 
 <header class="sticky flex justify-between py-6 mx-16">
@@ -11,38 +12,19 @@ import CodeIcon from "../icons/Code.astro";
     <p>Eduardo Valencia</p>
   </div>
   <nav class="flex items-center mx-16">
-    <span>
-      <a
-        href="https://www.instagram.com/eduardovg_"
-        class="flex px-3 text-s items-center text-xs transition-transform 200ms ease-in-out hover:scale-110 hover:text-[#12F7D6]"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <InstagramIcon class="size-3 mx-2" />
-        Instagram
-      </a>
-    </span>
-    <span>
-      <a
-        href="https://github.com/Obskurath/"
-        class="flex px-3 text-s items-center text-xs transition-transform 200ms ease-in-out hover:scale-110 hover:text-[#12F7D6]"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <GitHubIcon class="size-3 mx-2" />
-        GitHub
-      </a>
-    </span>
-    <span>
-      <a
-        href="https://www.linkedin.com/"
-        class="flex px-3 r text-s items-center text-xs transition-transform 200ms ease-in-out hover:scale-110 hover:text-[#12F7D6]"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <LinkedInIcon class="size-3 mx-2" />
-        LinkedIn
-      </a>
-    </span>
+    <SocialPill href="https://www.instagram.com/eduardovg_">
+      <InstagramIcon class="size-3 mx-2" />
+      Instagram
+    </SocialPill>
+
+    <SocialPill href="https://github.com/Obskurath/">
+      <GitHubIcon class="size-3 mx-2" />
+      GitHub
+    </SocialPill>
+
+    <SocialPill href="https://www.linkedin.com/">
+      <LinkedInIcon class="size-3 mx-2" />
+      LinkedIn
+    </SocialPill>
   </nav>
 </header>
