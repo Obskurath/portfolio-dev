@@ -1,5 +1,4 @@
 ---
-import Download from "../icons/Download.astro";
 import Layout from "../layouts/Layout.astro";
 import Mail from "../icons/Mail.astro";
 import Work from "../icons/Work.astro";
@@ -17,11 +16,12 @@ import JS from "../icons/JS.astro";
 import REACT from "../icons/REACT.astro";
 import Code from "../icons/Code.astro";
 import Line from "../icons/Line.astro";
-import Projects from "../icons/Projects.astro";
 import Line2 from "../icons/Line2.astro";
 import Send from "../icons/Send.astro";
 import Badge from "../components/Badge.astro";
 import InfoPill from "../components/InfoPill.astro";
+import ButtonCV from "../components/ButtonCV.astro";
+import Tech from "../components/Tech.astro";
 ---
 
 <style>
@@ -35,7 +35,7 @@ import InfoPill from "../components/InfoPill.astro";
 </style>
 
 <Layout title="Eduardo Valencia - Portfolio">
-  <div class="container mx-auto px-4">
+  <div class="container mx-auto px-4 flex flex-col flex-wrap">
     <main id="home" class="h-fit pb-20">
       <div>
         <h1 class="flex justify-center mx-auto text-[#98FAEC] text-8xl my-11">
@@ -84,13 +84,7 @@ import InfoPill from "../components/InfoPill.astro";
             </div>
           </div>
 
-          <button
-            class="relative mt-4 bg-white px-2 py-3 rounded-3xl text-black mb-5 z-10 flex h-[50px] w-40 items-center justify-center overflow-hidden shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-[#12f7d6] before:duration-[350ms] before:ease-out hover:before:h-56 hover:before:w-56"
-          >
-            <a class="z-20" href="">Download CV</a>
-
-            <Download class="mx-2 z-20 size-6" />
-          </button>
+          <ButtonCV />
         </div>
 
         <div class="relative size-96 w-[600px] font-thin mt-4">
@@ -126,20 +120,11 @@ import InfoPill from "../components/InfoPill.astro";
           </p>
         </div>
         <div
-          class="flex flex-col justify-center items-center h-80 w-44 bg-[#1A1E23] rounded-[60px] gap-y-10"
+          class="grid grid-cols-1 h-fit py-10 w-44 bg-[#1A1E23] rounded-[60px] gap-y-10 sticky top-[60%]"
         >
-          <div class="flex gap-x-5">
-            <p class="text-4xl pl-4 text-[#12F7D6] font-bold">4</p>
-            <p class="text-sm text-wrap">Programming Languages</p>
-          </div>
-          <div class="flex gap-x-5">
-            <p class="text-4xl pl-4 text-[#12F7D6] font-bold">6</p>
-            <p class="text-sm text-wrap">Development Tools</p>
-          </div>
-          <div class="flex gap-x-5">
-            <p class="text-4xl pl-4 text-[#12F7D6] font-bold">8</p>
-            <p class="text-sm text-wrap">Years of Experience</p>
-          </div>
+          <Tech number="4" text="Programming Languages" />
+          <Tech number="6" text="Developement Tools" />
+          <Tech number="1" text="Year of Experience" />
         </div>
       </div>
     </main>

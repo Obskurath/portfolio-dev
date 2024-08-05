@@ -24,9 +24,8 @@ const { title } = Astro.props;
 
   <body>
     <Header />
-    <div class="container mx-auto px-4">
-      <Separator class="w-90" />
-    </div>
+    <Separator width="90%" />
+    <div class="container mx-auto px-4"></div>
     <slot />
   </body>
 
@@ -39,7 +38,7 @@ const { title } = Astro.props;
     }
 
     .container {
-      max-width: 90%;
+      max-width: 1200px;
     }
 
     body {
