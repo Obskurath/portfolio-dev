@@ -6,25 +6,26 @@ import CodeIcon from "../icons/Code.astro";
 import SocialPill from "./SocialPill.astro";
 ---
 
-<header class="flex justify-between py-6 mx-16">
-  <div class="flex px-12 items-center">
+<footer class="flex items-center justify-around">
+  <div class="flex items-center">
     <CodeIcon class="mx-2 size-7" />
-    <p>Eduardo Valencia</p>
+    <p class="text-sm">Eduardo Valencia</p>
   </div>
-  <nav class="flex items-center mx-16">
+  <nav class="flex items-center gap-0 my-3">
     <SocialPill href="https://www.instagram.com/eduardovg_">
-      <InstagramIcon class="size-3 mx-2" />
-      Instagram
+      <InstagramIcon class="size-5" />
     </SocialPill>
 
     <SocialPill href="https://github.com/Obskurath/">
-      <GitHubIcon class="size-3 mx-2" />
-      GitHub
+      <GitHubIcon class="size-5" />
     </SocialPill>
 
     <SocialPill href="https://www.linkedin.com/">
-      <LinkedInIcon class="size-3 mx-2" />
-      LinkedIn
+      <LinkedInIcon class="size-5" />
     </SocialPill>
   </nav>
-</header>
+
+  <p class="text-sm">
+    Design by <span class="text-[#12F7D6]"> JonannLeon</span>
+  </p>
+</footer>
