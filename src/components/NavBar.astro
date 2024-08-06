@@ -42,12 +42,27 @@ import Mail from "../icons/Mail.astro";
 </nav>
 
 <script>
-  document.querySelectorAll("nav a").forEach((link) => {
-    link.addEventListener("click", function (this: HTMLElement) {
-      document
-        .querySelectorAll("nav a")
-        .forEach((item) => item.classList.remove("active"));
-      this.classList.add("active");
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = entry.target.getAttribute("id");
+          const navLink = document.querySelector(`nav a[href="#${id}"]`);
+
+          if (entry.isIntersecting) {
+            navLinks.forEach((link) => link.classList.remove("active"));
+            navLink.classList.add("active");
+          }
+        });
+      },
+      { threshold: 0 } // Cambia este valor según el nivel de intersección que prefieras
+    );
+
+    sections.forEach((section) => {
+      observer.observe(section);
     });
   });
 </script>
