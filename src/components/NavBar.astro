@@ -50,7 +50,7 @@ import Mail from "../icons/Mail.astro";
     let lastScrollY = window.scrollY; // Para detectar la dirección del scroll
 
     // Función para activar un ícono específico
-    function activateIcon(link) {
+    function activateIcon(link: HTMLAnchorElement) {
       navLinks.forEach((navLink) => navLink.classList.remove("active"));
       link.classList.add("active");
     }
@@ -58,7 +58,9 @@ import Mail from "../icons/Mail.astro";
     // Función para activar el ícono de Home
     function activateHomeIcon() {
       if (!isClickActive) {
-        activateIcon(document.querySelector('nav a[href="#top"]'));
+        activateIcon(
+          document.querySelector('nav a[href="#top"]') as HTMLAnchorElement
+        );
       }
     }
 
@@ -74,7 +76,9 @@ import Mail from "../icons/Mail.astro";
 
           entries.forEach((entry) => {
             const id = entry.target.getAttribute("id");
-            const navLink = document.querySelector(`nav a[href="#${id}"]`);
+            const navLink = document.querySelector(
+              `nav a[href="#${id}"]`
+            ) as HTMLAnchorElement;
 
             if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
               activateIcon(navLink);
@@ -83,7 +87,7 @@ import Mail from "../icons/Mail.astro";
           });
 
           if (!activeSectionFound && window.scrollY > 0) {
-            let closestSection = null;
+            let closestSection: Element | null = null;
             let minDistance = Number.POSITIVE_INFINITY;
 
             sections.forEach((section) => {
@@ -98,8 +102,8 @@ import Mail from "../icons/Mail.astro";
 
             if (closestSection) {
               const closestNavLink = document.querySelector(
-                `nav a[href="#${closestSection}"]`
-              );
+                `nav a[href="#${(closestSection as { id: string }).id}"]`
+              ) as HTMLAnchorElement;
               activateIcon(closestNavLink);
             }
           }
@@ -136,7 +140,7 @@ import Mail from "../icons/Mail.astro";
     navLinks.forEach((link) => {
       link.addEventListener("click", () => {
         isClickActive = true; // Activación por clic
-        activateIcon(link);
+        activateIcon(link as HTMLAnchorElement);
 
         // Desactivar el control después de un breve tiempo para permitir la activación por scroll nuevamente
         setTimeout(() => {
