@@ -48,6 +48,8 @@ import Mail from "../icons/Mail.astro";
 
     const observer = new IntersectionObserver(
       (entries) => {
+        let activeSectionFound = false;
+
         entries.forEach((entry) => {
           const id = entry.target.getAttribute("id");
           const navLink = document.querySelector(`nav a[href="#${id}"]`);
@@ -55,14 +57,49 @@ import Mail from "../icons/Mail.astro";
           if (entry.isIntersecting) {
             navLinks.forEach((link) => link.classList.remove("active"));
             navLink.classList.add("active");
+            activeSectionFound = true;
           }
         });
+
+        // Verifica si alguna sección está activa
+        if (!activeSectionFound) {
+          // Encuentra la sección más cercana al centro de la ventana gráfica
+          let closestSection = null;
+          let minDistance = Number.POSITIVE_INFINITY;
+
+          sections.forEach((section) => {
+            const rect = section.getBoundingClientRect();
+            const distance = Math.abs(rect.top - window.innerHeight / 2);
+
+            if (distance < minDistance) {
+              minDistance = distance;
+              closestSection = section;
+            }
+          });
+
+          // Activa la sección más cercana
+          if (closestSection) {
+            navLinks.forEach((link) => link.classList.remove("active"));
+            const closestNavLink = document.querySelector(
+              `nav a[href="#${closestSection.id}"]`
+            );
+            closestNavLink.classList.add("active");
+          }
+        }
       },
-      { threshold: 0 } // Cambia este valor según el nivel de intersección que prefieras
+      { threshold: [0.3, 0.7] } // Ajuste del umbral
     );
 
     sections.forEach((section) => {
       observer.observe(section);
+    });
+
+    // Evento de scroll para detectar la parte superior de la página
+    window.addEventListener("scroll", () => {
+      if (window.scrollY === 0) {
+        navLinks.forEach((link) => link.classList.remove("active"));
+        document.querySelector('nav a[href="#top"]').classList.add("active");
+      }
     });
   });
 </script>
