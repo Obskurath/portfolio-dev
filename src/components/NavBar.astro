@@ -46,48 +46,66 @@ import Mail from "../icons/Mail.astro";
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll("nav a");
 
+    let isClickActive = false; // Variable de control
+    let lastScrollY = window.scrollY; // Para detectar la dirección del scroll
+
+    // Función para activar un ícono específico
+    function activateIcon(link) {
+      navLinks.forEach((navLink) => navLink.classList.remove("active"));
+      link.classList.add("active");
+    }
+
+    // Función para activar el ícono de Home
+    function activateHomeIcon() {
+      if (!isClickActive) {
+        activateIcon(document.querySelector('nav a[href="#top"]'));
+      }
+    }
+
+    // Verifica la posición inicial del scroll
+    if (window.scrollY === 0) {
+      activateHomeIcon();
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
-        let activeSectionFound = false;
+        if (!isClickActive) {
+          let activeSectionFound = false;
 
-        entries.forEach((entry) => {
-          const id = entry.target.getAttribute("id");
-          const navLink = document.querySelector(`nav a[href="#${id}"]`);
+          entries.forEach((entry) => {
+            const id = entry.target.getAttribute("id");
+            const navLink = document.querySelector(`nav a[href="#${id}"]`);
 
-          if (entry.isIntersecting) {
-            navLinks.forEach((link) => link.classList.remove("active"));
-            navLink.classList.add("active");
-            activeSectionFound = true;
-          }
-        });
-
-        // Verifica si alguna sección está activa
-        if (!activeSectionFound) {
-          // Encuentra la sección más cercana al centro de la ventana gráfica
-          let closestSection = null;
-          let minDistance = Number.POSITIVE_INFINITY;
-
-          sections.forEach((section) => {
-            const rect = section.getBoundingClientRect();
-            const distance = Math.abs(rect.top - window.innerHeight / 2);
-
-            if (distance < minDistance) {
-              minDistance = distance;
-              closestSection = section;
+            if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+              activateIcon(navLink);
+              activeSectionFound = true;
             }
           });
 
-          // Activa la sección más cercana
-          if (closestSection) {
-            navLinks.forEach((link) => link.classList.remove("active"));
-            const closestNavLink = document.querySelector(
-              `nav a[href="#${closestSection.id}"]`
-            );
-            closestNavLink.classList.add("active");
+          if (!activeSectionFound && window.scrollY > 0) {
+            let closestSection = null;
+            let minDistance = Number.POSITIVE_INFINITY;
+
+            sections.forEach((section) => {
+              const rect = section.getBoundingClientRect();
+              const distance = Math.abs(rect.top - window.innerHeight / 2);
+
+              if (distance < minDistance) {
+                minDistance = distance;
+                closestSection = section;
+              }
+            });
+
+            if (closestSection) {
+              const closestNavLink = document.querySelector(
+                `nav a[href="#${closestSection.id}"]`
+              );
+              activateIcon(closestNavLink);
+            }
           }
         }
       },
-      { threshold: [0.3, 0.7] } // Ajuste del umbral
+      { threshold: [0.5] } // Umbral ajustado para una transición más rápida
     );
 
     sections.forEach((section) => {
@@ -97,10 +115,38 @@ import Mail from "../icons/Mail.astro";
     // Evento de scroll para detectar la parte superior de la página
     window.addEventListener("scroll", () => {
       if (window.scrollY === 0) {
-        navLinks.forEach((link) => link.classList.remove("active"));
-        document.querySelector('nav a[href="#top"]').classList.add("active");
+        activateHomeIcon();
+      }
+
+      // Verificar la dirección del scroll
+      if (!isClickActive) {
+        requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          const scrollingDown = currentScrollY > lastScrollY;
+          lastScrollY = currentScrollY;
+
+          if (!scrollingDown) {
+            observer.takeRecords();
+          }
+        });
       }
     });
+
+    // Evento de clic para activar el ícono manualmente
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        isClickActive = true; // Activación por clic
+        activateIcon(link);
+
+        // Desactivar el control después de un breve tiempo para permitir la activación por scroll nuevamente
+        setTimeout(() => {
+          isClickActive = false;
+        }, 500); // Ajuste del tiempo de control para una transición más suave
+      });
+    });
+
+    // Forzar la observación inmediata de las secciones por si alguna es visible
+    observer.takeRecords();
   });
 </script>
 
