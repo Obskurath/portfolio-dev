@@ -7,21 +7,54 @@ import Mail from "../icons/Mail.astro";
 ---
 
 <nav
-  class="fixed h-fit w-fit bg-[#1A1E23] text-white border-white border-1 top-[20%] left-[3%] z-50 rounded-full px-1 py-2 grid gap-5"
+  class="fixed h-fit w-fit bg-[#1A1E23] top-[20%] left-[3%] z-50 rounded-full px-2 py-2 grid gap-5 border-[1px]"
 >
-  <a href="#top">
-    <Home />
+  <a
+    href="#home"
+    class="rounded-full transition-all ease-in duration-[200ms] hover:bg-white hover:text-black"
+  >
+    <Home class="size-8 p-[8px]" />
   </a>
-  <a href="#about">
-    <About />
+  <a
+    href="#about"
+    class="rounded-full transition-all ease-in duration-[200ms] hover:bg-white hover:text-black"
+  >
+    <About class="size-8 p-[8px]" />
   </a>
-  <a href="#skills">
-    <Skills />
+  <a
+    href="#skills"
+    class="rounded-full transition-all ease-in duration-[200ms] hover:bg-white hover:text-black"
+  >
+    <Skills class="size-8 p-[8px]" />
   </a>
-  <a href="#projects">
-    <Projects />
+  <a
+    href="#projects"
+    class="rounded-full transition-all ease-in duration-[200ms] hover:bg-white hover:text-black"
+  >
+    <Projects class="size-8 p-[8px]" />
   </a>
-  <a href="#contact">
-    <Mail />
+  <a
+    href="#contact"
+    class="rounded-full transition-all ease-in duration-[200ms] hover:bg-white hover:text-black"
+  >
+    <Mail class="size-8 p-[8px]" />
   </a>
 </nav>
+
+<script>
+  document.querySelectorAll("nav a").forEach((link) => {
+    link.addEventListener("click", function (this: HTMLElement) {
+      document
+        .querySelectorAll("nav a")
+        .forEach((item) => item.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
+</script>
+
+<style>
+  nav a.active {
+    background-color: white;
+    color: black;
+  }
+</style>
