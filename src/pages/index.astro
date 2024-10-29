@@ -36,7 +36,7 @@ import Tech from "../components/Tech.astro";
 
 <Layout title="Eduardo Valencia - Portfolio">
   <div class="container mx-auto px-4 flex flex-col flex-wrap">
-    <main id="home" class="h-fit pb-20">
+    <main id="home" class="h-screen py-16">
       <div>
         <h1 class="flex justify-center mx-auto text-[#98FAEC] text-8xl my-11">
           Developer
@@ -295,7 +295,7 @@ import Tech from "../components/Tech.astro";
           const inputs = document.querySelectorAll('input[required], textarea[required]');
 
           function checkInputs() {
-        const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+        const allFilled = Array.from(inputs).every(input => (input as HTMLInputElement | HTMLTextAreaElement).value.trim() !== '');
         if (allFilled) {
           button.classList.add('bg-[#12F7D6]', 'cursor-pointer');
           button.classList.remove('bg-[#7d7d7f]', 'cursor-default');
