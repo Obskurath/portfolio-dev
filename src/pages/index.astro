@@ -299,12 +299,10 @@ import Tech from "../components/Tech.astro";
         const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
         if (allFilled) {
           button.classList.add('bg-[#12F7D6]', 'cursor-pointer');
-          button.classList.remove('bg-[#7d7d7f]', 'cursor-not-allowed');
-          button.disabled = false;
+          button.classList.remove('bg-[#7d7d7f]', 'cursor-default');
         } else {
-          button.classList.add('bg-[#7d7d7f]', 'cursor-not-allowed');
+          button.classList.add('bg-[#7d7d7f]', 'cursor-default');
           button.classList.remove('bg-[#12F7D6]', 'cursor-pointer');
-          button.disabled = true;
         }
           }
 
