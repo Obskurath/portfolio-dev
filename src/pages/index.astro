@@ -58,6 +58,7 @@ import Tech from "../components/Tech.astro";
           <p class="text-center text-2xl">
             Eduardo
             <p class="text-xs text-center">Front-End Developer</p>
+          </p>
 
           <div class="mt-6">
             <InfoPill href="mailto:EduardoVG@proton.me">
@@ -200,7 +201,7 @@ import Tech from "../components/Tech.astro";
         class="flex flex-col items-center bg-[#98FAEC] text-black p-4 text-xs rounded-xl w-[200px]"
       >
         <App />
-        <p class="text-base">App Development</p>
+        <p class="text-base">App Developement</p>
         <p>Coming Soon!</p>
       </div>
 
@@ -250,30 +251,26 @@ import Tech from "../components/Tech.astro";
     <div class="grid grid-cols-2 gap-x-32 w-[800px]">
       <div class="">
         <p class="name text-xs text-[#12f7d6] text-start my-2">Your name*</p>
-        <label>
-          <input
-            type="text"
-            required
-            placeholder="Enter your name"
-            class="bg-[#292f36] text-sm p-2 mb-4 border-b-2 border-[#12F7D6] focus:outline-none focus:ring-0 w-full"
-          />
-        </label>
+        <input
+          type="text"
+          required
+          placeholder="Enter your name"
+          class="bg-[#292f36] text-sm p-2 mb-4 border-b-2 border-[#12F7D6] focus:outline-none focus:ring-0 w-full"
+        />
       </div>
       <div>
         <p class="text-xs text-[#12F7D6] text-start my-2">Your email*</p>
-        <label>
-          <input
-            type="text"
-            required
-            placeholder="Enter your email"
-            class="bg-[#292f36] text-sm p-2 mb-4 border-b-2 border-[#12F7D6] focus:outline-none focus:ring-0 w-full"
-          />
-        </label>
+        <input
+          type="text"
+          required
+          placeholder="Enter your email"
+          class="bg-[#292f36] text-sm p-2 mb-4 border-b-2 border-[#12F7D6] focus:outline-none focus:ring-0 w-full"
+        />
       </div>
 
       <div class="grid-cols-subgrid col-span-2">
         <p class="text-xs text-[#12F7D6] text-start my-2">Your message*</p>
-        <label for="textarea"></label><textarea
+        <textarea
           name=""
           value=""
           required
