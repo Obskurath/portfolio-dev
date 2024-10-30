@@ -36,7 +36,7 @@ import Tech from "../components/Tech.astro";
 
 <Layout title="Eduardo Valencia - Portfolio">
   <div class="container mx-auto px-4 flex flex-col flex-wrap">
-    <main id="home" class="h-screen py-16">
+    <main id="home" class="min-h-screen py-16">
       <div>
         <h1 class="flex justify-center mx-auto text-[#98FAEC] text-8xl my-11">
           Developer
@@ -132,10 +132,10 @@ import Tech from "../components/Tech.astro";
 
   <section
     id="about"
-    class="bg-cover bg-center h-dvh bg-[#1A1E23]"
+    class="bg-cover bg-center min-h-screen bg-[#1A1E23]"
     style="background-image: url('/img/about-bg.svg');"
   >
-    <div class="container mx-auto px-4 flex justify-around h-full items-end">
+    <div class="container mx-auto px-4 flex justify-around h-full items-end flex-wrap">
       <div id="info" class="my-auto flex flex-col relative bottom-0">
         <h2
           class="bg-[#292f36] h-16 w-fit text-4xl border-2 rounded-tl-[20px] rounded-br-[20px] border-[#12F7D6] px-4 flex items-center my-9 mb-16"
@@ -172,13 +172,13 @@ import Tech from "../components/Tech.astro";
           <P_ class="my-2 mt-3" />
         </div>
       </div>
-      <img src="/img/about.png" alt="About Me" class="w-80 h-auto mb-[8%]" />
+      <img src="/img/about.png" alt="About Me" class="aspect-[320/400] max-w-[320px] mb-[8%]" />
     </div>
   </section>
 
   <section
     id="skills"
-    class="bg-cover bg-center h-dvh grid place-items-center text-center relative"
+    class="bg-cover bg-center min-h-screen grid place-items-center text-center relative"
     style="background-image: url(/img/skills-bg.png);"
   >
     <Code class="absolute top-[7%] size-24" />
@@ -224,7 +224,7 @@ import Tech from "../components/Tech.astro";
 
   <section
     id="projects"
-    class="bg-cover bg-center h-dvh grid place-items-center text-center relative"
+    class="bg-cover bg-center min-h-screen grid place-items-center text-center relative"
     style="background-image: url(/img/projects-bg.png);"
   >
     <div class="w-full">
@@ -236,7 +236,7 @@ import Tech from "../components/Tech.astro";
 
   <section
     id="contact"
-    class="bg-[#292f36] h-dvh grid place-items-center text-center"
+    class="bg-[#292f36] min-h-screen grid place-items-center text-center"
   >
     <div>
       <h4 class="text-6xl text-[#12F7D6] mt-32">Contact</h4>
