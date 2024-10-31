@@ -99,7 +99,7 @@ import Tech from "../components/Tech.astro";
             </p>
           </div>
           <p
-            class="flex text-2xl items-center text-[#12F7D6] font-bold mt-8 pb-12"
+            class="flex text-2xl items-center text-[#12F7D6] font-bold mt-8 pb-6"
           >
             Lets Talk!
 
@@ -115,7 +115,7 @@ import Tech from "../components/Tech.astro";
           </p>
         </div>
         <div
-          class="grid grid-cols-1 h-fit py-10 w-44 bg-[#1A1E23] rounded-[60px] gap-y-10 my-20 mb-0 mx-auto lg:mx-0  md:mb-0"
+          class="grid grid-cols-1 h-fit py-10 w-44 bg-[#1A1E23] rounded-[60px] gap-y-10 my-0 mb-0 mx-auto lg:mx-0  md:mb-0"
         >
           <Tech number="4" text="Programming Languages" />
           <Tech number="6" text="Developed Projects" />
@@ -133,12 +133,12 @@ import Tech from "../components/Tech.astro";
     <div class="container mx-auto px-4 flex justify-around h-full items-end flex-wrap">
       <div id="info" class="my-auto flex flex-col relative bottom-0">
         <h2
-          class="bg-[#292f36] h-16 w-fit text-4xl border-2 rounded-tl-[20px] rounded-br-[20px] border-[#12F7D6] px-4 flex items-center my-9 mb-16"
+          class="bg-[#292f36] h-16 w-fit text-4xl border-2 rounded-tl-[20px] rounded-br-[20px] border-[#12F7D6] px-4 flex items-center my-9 md:mt-32 md:mb-16"
         >
           About Me
         </h2>
 
-        <div class="bg-[#292f36] rounded-[20px] max-w-[750px] p-4">
+        <div class="bg-[#292f36] rounded-[20px] max-w-[750px] p-4 mb-6 lg:py-auto">
           <P class="my-2" />
           <p class="highlight text-2xl mb-3">Hello!</p>
           <p class="text-sm">
@@ -167,7 +167,7 @@ import Tech from "../components/Tech.astro";
           <P_ class="my-2 mt-3" />
         </div>
       </div>
-      <img src="/img/about.png" alt="About Me" class="aspect-[320/400] max-w-[320px] mb-[8%]" />
+      <img src="/img/about.png" alt="About Me" class="aspect-[320/400] max-w-[320px] hidden md:block" />
     </div>
   </section>
 
@@ -231,7 +231,7 @@ import Tech from "../components/Tech.astro";
 
   <section
     id="contact"
-    class="bg-[#292f36] min-h-screen grid place-items-center text-center"
+    class="bg-[#292f36] min-h-screen grid place-items-center text-center m-6"
   >
     <div>
       <h4 class="text-6xl text-[#12F7D6] mt-32">Contact</h4>
@@ -239,11 +239,11 @@ import Tech from "../components/Tech.astro";
       <p>I'm currently available for freelance work</p>
     </div>
     <h5
-      class="bg-[#292f36] h-14 w-fit text-2xl border-2 rounded-tl-[25px] rounded-br-[25px] border-[#12F7D6] px-8 flex items-center mt-16 mb-16 text-[#12F7D6]"
+      class="bg-[#292f36] h-14 w-fit md:text-2xl border-2 rounded-tl-[25px] rounded-br-[25px] border-[#12F7D6] px-8 flex items-center mt-16 mb-16 text-[#12F7D6] text-xl"
     >
       Send Me A Message
     </h5>
-    <div class="grid grid-cols-2 gap-x-32 max-w-[800px]">
+    <div class="grid grid-cols-2 gap-x-20 max-w-[800px]">
       <div class="">
         <p class="name text-xs text-[#12f7d6] text-start my-2">Your name*</p>
         <input
