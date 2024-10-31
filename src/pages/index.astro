@@ -36,15 +36,10 @@ import Tech from "../components/Tech.astro";
 
 <Layout title="Eduardo Valencia - Portfolio">
   <div class="container mx-auto px-4 flex flex-col flex-wrap">
-    <main id="home" class="min-h-screen py-16">
-      <div>
-        <h1 class="flex justify-center mx-auto text-[#98FAEC] text-6xl my-11 md:text-8xl">
-          Developer
-        </h1>
-      </div>
-      <div class="flex flex-wrap justify-between">
+    <main id="home" class="min-h-screen py-24 mx-8">
+      <div class="flex flex-wrap justify-between mt-0 md:mt-24">
         <div
-          class="relative h-fit rounded-tl-[100px] rounded-br-[100px] p-4 max-w-fit justify-center items-center border-white border-[3px]"
+          class="relative h-fit rounded-tl-[100px] rounded-br-[100px] p-4 max-w-fit justify-center items-center border-white border-[3px] mt-6 mb-20 mx-auto md:mx-0 md:ml-0  md:mr-4 md:mb-0"
         >
           <div
             class="absolute top-[-6px] left-[-6px] inset-0 border-t-[4px] border-l-[4px] border-[#12F7D6] rounded-tl-[101px] z-0 pointer-events-none"
@@ -87,17 +82,17 @@ import Tech from "../components/Tech.astro";
           <ButtonCV />
         </div>
 
-        <div class="relative size-96 max-w-[300px] font-thin mt-4">
+        <div class="relative max-w-[500px] font-thin mt-4 mx-auto mb-12">
           <H1 class="absolute left-[-15px] top-[-10px]" />
-          <p class="text-6xl font-ubuntu leading-tight">
-            Hey <br /> I'm <span class="highlight">Eduardo</span>, <br /> Front-End
+          <p class="text-4xl font-ubuntu leading-tight text-pretty">
+            Hey <br /> I'm <span class="highlight">Eduardo</span>, Front-End
             Developer
           </p>
           <H1_ class="absolute right-0 mb-16" />
 
-          <div class="mt-14 relative">
+          <div class="mt-10 relative">
             <P class="mb-4 absolute left-[-15px]" />
-            <p class="py-6">
+            <p class="py-4 text-pretty">
               I help business grow by crafting amazing web experiences. If
               you're looking for a developer that likes to get stuff done.
               <P_ class="mt-4 absolute left-[-15px]" />
@@ -120,7 +115,7 @@ import Tech from "../components/Tech.astro";
           </p>
         </div>
         <div
-          class="grid grid-cols-1 h-fit py-10 w-44 bg-[#1A1E23] rounded-[60px] gap-y-10 sticky top-[60%]"
+          class="grid grid-cols-1 h-fit py-10 w-44 bg-[#1A1E23] rounded-[60px] gap-y-10 my-20 mb-0 mx-auto lg:mx-0  md:mb-0"
         >
           <Tech number="4" text="Programming Languages" />
           <Tech number="6" text="Developed Projects" />
@@ -143,7 +138,7 @@ import Tech from "../components/Tech.astro";
           About Me
         </h2>
 
-        <div class="bg-[#292f36] rounded-[20px] max-w-[750px] p-4 mr-10">
+        <div class="bg-[#292f36] rounded-[20px] max-w-[750px] p-4">
           <P class="my-2" />
           <p class="highlight text-2xl mb-3">Hello!</p>
           <p class="text-sm">
