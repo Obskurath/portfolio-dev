@@ -297,11 +297,15 @@ import Tech from "../components/Tech.astro";
           function checkInputs() {
         const allFilled = Array.from(inputs).every(input => (input as HTMLInputElement | HTMLTextAreaElement).value.trim() !== '');
         if (allFilled) {
-          button.classList.add('bg-[#12F7D6]', 'cursor-pointer');
-          button.classList.remove('bg-[#7d7d7f]', 'cursor-default');
+          if (button) {
+            button.classList.add('bg-[#12F7D6]', 'cursor-pointer');
+            button.classList.remove('bg-[#7d7d7f]', 'cursor-default');
+          }
         } else {
-          button.classList.add('bg-[#7d7d7f]', 'cursor-default');
-          button.classList.remove('bg-[#12F7D6]', 'cursor-pointer');
+          if (button) {
+            button.classList.add('bg-[#7d7d7f]', 'cursor-default');
+            button.classList.remove('bg-[#12F7D6]', 'cursor-pointer');
+          }
         }
           }
 
