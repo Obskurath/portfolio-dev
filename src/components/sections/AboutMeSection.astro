@@ -1,0 +1,59 @@
+---
+import P from "@icons/P.astro";
+import P_ from "@icons/P_.astro";
+
+---
+<section
+id="about"
+class="bg-cover bg-center min-h-screen bg-[#1A1E23]"
+style="background-image: url('/img/about-bg.svg');"
+>
+<div
+  class="container mx-auto px-4 flex justify-around h-full items-end flex-wrap max-w-[1280px] place-content-center "
+>
+  <div id="info" class="flex flex-col relative bottom-0 lg:mx-20 xl:mx-0">
+    <h2
+      class="bg-[#292f36] h-16 w-fit text-4xl border-2 rounded-tl-[20px] rounded-br-[20px] border-[#12F7D6] px-4 flex items-center my-9 md:mt-20 md:mb-16"
+    >
+      About Me
+    </h2>
+
+    <div
+      class="bg-[#292f36] rounded-[20px] max-w-[600px] 2xl:max-w-[750px] p-4 mb-16 md:mr-4 lg:mr-0 "
+    >
+      <P class="my-2" />
+      <p class="highlight text-2xl mb-3">Hello!</p>
+      <p class="text-sm">
+        My name is Eduardo and i specialize in Web Development that utilizes <span
+          class="highlight">HTML</span
+        >, <span class="highlight">CSS</span>, <span class="highlight"
+          >JS</span
+        > and <span class="highlight">REACT</span>. Currently learning <span
+          class="highlight">ASTRO</span
+        > and <span class="highlight">TAILWINDCSS</span>.
+
+        <br />
+        <br />
+        I am highly motivated individual with a passion for learning and growing
+        in the tech industry. Always looking for new challenges and opportunities
+        to grow my skills. Striving to never stop learning and improving.
+
+        <br />
+        <br />
+        When I'm not coding, you can find me at the GYM, maintaining a healthy
+        lifestyle. I believe that physical fitness is just as important as mental
+        fitness. Taking care of my body allows me to stay focused and energized
+        when I'm coding, and it's a great way to balance out the sedentary nature
+        of my work.
+      </p>
+      <P_ class="my-2 mt-3" />
+    </div>
+  </div>
+  <img
+    src="/img/about.webp"
+    alt="About Me"
+    class="aspect-[320/400] max-w-[280px] pb-20 my-6"
+    loading="lazy"
+  />
+</div>
+</section>
