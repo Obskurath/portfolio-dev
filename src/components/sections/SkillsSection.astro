@@ -1,0 +1,60 @@
+---
+import FrontEnd from "@icons/Front-End.astro";
+import BackEnd from "@icons/Back-End.astro";
+import App from "@icons/App.astro";
+import HTML from "@icons/HTML.astro";
+import CSS from "@icons/CSS.astro";
+import JS from "@icons/JS.astro";
+import REACT from "@icons/REACT.astro";
+import Code from "@icons/Code.astro";
+import Line from "@icons/Line.astro";
+ 
+
+---
+<section
+id="skills"
+class="bg-cover bg-center min-h-screen grid place-items-center text-center relative px-4"
+style="background-image: url(/img/skills-bg.jpg);"
+>
+<Code class="size-16 mt-4 md:mt-2 md:size-20 lg:size-24" />
+
+<div class="mb-4">
+  <h3 class="text-6xl text-[#12F7D6]">Skills</h3>
+  <Line class="mx-auto mb-3 mt-1" />
+  <p>I am striving to never stop learning and improving ;)</p>
+</div>
+<div
+  class="grid gap-10 place-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+>
+  <div
+    class="flex flex-col items-center bg-[#98FAEC] text-black p-4 text-xs rounded-xl w-[200px]"
+  >
+    <FrontEnd />
+    <p class="text-base">Front-End</p>
+    <p>HTML CSS JS REACT</p>
+  </div>
+
+  <div
+    class="flex flex-col items-center bg-[#98FAEC] text-black p-4 text-xs rounded-xl w-[200px]"
+  >
+    <App />
+    <p class="text-base">App Developement</p>
+    <p>Coming Soon!</p>
+  </div>
+
+  <div
+    class="flex flex-col items-center bg-[#98FAEC] text-black p-4 text-xs rounded-xl w-[200px]"
+  >
+    <BackEnd />
+    <p class="text-base">Back-End</p>
+    <p>Coming Soon!</p>
+  </div>
+</div>
+
+<div class="grid gap-x-20 gap-y-8 my-10 grid-cols-2 md:grid-cols-4 md:mt-0">
+  <HTML class="h-auto w-24" />
+  <CSS class="h-auto w-24" />
+  <JS class="h-auto w-24" />
+  <REACT class="h-auto w-24" />
+</div>
+</section>
