@@ -3,29 +3,29 @@ import GitHubIcon from "../icons/GitHub.astro";
 import InstagramIcon from "../icons/Instagram.astro";
 import LinkedInIcon from "../icons/LinkedIn.astro";
 import CodeIcon from "../icons/Code.astro";
-import SocialPill from "./SocialPill.astro";
-import Separator from "./Separator.astro";
+import SocialPill from "./others/SocialPill.astro";
+import Separator from "./others/Separator.astro";
 ---
 
-<header class="absolute w-[100%] h-[7%] ">
+<header class="absolute w-[100%] h-[7%] lg:h-[8%]">
   <div class="flex relative justify-center mx-16 h-[100%] md:justify-between">
-    <div class="flex px-12 items-center">
-      <CodeIcon class="mx-2 size-7" />
-      <p>Eduardo Valencia</p>
+    <div class="flex px-8 md:px-12 items-center">
+      <CodeIcon class="mx-2 size-7 md:size-8" />
+      <p class="text-lg">Eduardo Valencia</p>
     </div>
-    <nav class="hidden md:flex items-center mx-16">
+    <nav class="hidden md:flex items-center mx-8 md:mx-16 text-">
       <SocialPill href="https://www.instagram.com/eduardovg_">
-        <InstagramIcon class="size-3 mx-2" />
+        <InstagramIcon class="size-3 md:size-4 mx-2" />
         Instagram
       </SocialPill>
 
       <SocialPill href="https://github.com/Obskurath/">
-        <GitHubIcon class="size-3 mx-2" />
+        <GitHubIcon class="size-3 md:size-4 mx-2" />
         GitHub
       </SocialPill>
 
       <SocialPill href="https://www.linkedin.com/">
-        <LinkedInIcon class="size-3 mx-2" />
+        <LinkedInIcon class="size-3 md:size-4 mx-2" />
         LinkedIn
       </SocialPill>
     </nav>

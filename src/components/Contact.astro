@@ -1,0 +1,100 @@
+---
+import Line2 from "../icons/Line2.astro";
+import Send from "../icons/Send.astro";
+
+
+
+---
+
+
+<section
+    id="contact"
+    class="bg-[#292f36] flex flex-col justify-center items-center gap-20 place-items-center text-center m-4"
+  >
+    <div>
+      <h4 class="text-4xl lg:text-5xl text-[#12F7D6] mt-20">Contact</h4>
+      <Line2 class="mx-auto mb-3 mt-1" />
+      <p>I'm currently available for freelance work</p>
+    </div>
+    <h5
+      class="bg-[#292f36] h-14 w-fit md:text-2xl border-2 rounded-tl-[25px] rounded-br-[25px] border-[#12F7D6] px-8 flex items-center my-0 text-[#12F7D6] text-xl"
+    >
+      Send Me A Message
+    </h5>
+    <div class="grid grid-cols-2 gap-x-20 max-w-[800px]">
+      <div class="">
+        <p class="name text-xs text-[#12f7d6] text-start my-2">Your name*</p>
+        <input
+          type="text"
+          required
+          placeholder="Enter your name"
+          class="bg-[#292f36] text-sm p-2 mb-4 border-b-2 border-[#12F7D6] focus:outline-none focus:ring-0 w-full"
+        />
+      </div>
+      <div>
+        <p class="text-xs text-[#12F7D6] text-start my-2">Your email*</p>
+        <input
+          type="text"
+          required
+          placeholder="Enter your email"
+          class="bg-[#292f36] text-sm p-2 mb-4 border-b-2 border-[#12F7D6] focus:outline-none focus:ring-0 w-full"
+        />
+      </div>
+
+      <div class="grid-cols-subgrid col-span-2">
+        <p class="text-xs text-[#12F7D6] text-start my-2">Your message*</p>
+        <textarea
+          name=""
+          value=""
+          required
+          id="textarea"
+          cols="30"
+          rows="1"
+          placeholder="Enter your needs"
+          class="bg-[#292f36] text-sm p-2 grid-cols-subgrid col-span-2 border-b-2 border-[#12F7D6] focus:outline-none focus:ring-0 w-full"
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        class="bg-[#7d7d7f] text-[#292f36] rounded-[20px] py-2 px-4 w-fit mx-auto flex items-center justify-center gap-x-2 text-sm my-10 mb-6 grid-cols-subgrid col-span-2 transition-all ease-in duration-[200ms]"
+      >
+        Send Message
+        <Send class="size-4" />
+      </button>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const button = document.querySelector('button[type="submit"]');
+          const inputs = document.querySelectorAll(
+            "input[required], textarea[required]"
+          );
+
+          function checkInputs() {
+            const allFilled = Array.from(inputs).every(
+              (input) =>
+                (
+                  input as HTMLInputElement | HTMLTextAreaElement
+                ).value.trim() !== ""
+            );
+            if (allFilled) {
+              if (button) {
+                button.classList.add("bg-[#12F7D6]", "cursor-pointer");
+                button.classList.remove("bg-[#7d7d7f]", "cursor-default");
+              }
+            } else {
+              if (button) {
+                button.classList.add("bg-[#7d7d7f]", "cursor-default");
+                button.classList.remove("bg-[#12F7D6]", "cursor-pointer");
+              }
+            }
+          }
+
+          inputs.forEach((input) => {
+            input.addEventListener("input", checkInputs);
+          });
+
+          checkInputs(); // Initial check in case inputs are pre-filled
+        });
+      </script>
+    </div>
+  </section>
