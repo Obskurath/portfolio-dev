@@ -7,25 +7,25 @@ import SocialPill from "./SocialPill.astro";
 import Separator from "./Separator.astro";
 ---
 
-<header class="absolute w-[100%] h-[7%] ">
+<header class="absolute w-[100%] h-[7%]">
   <div class="flex relative justify-center mx-16 h-[100%] md:justify-between">
     <div class="flex px-12 items-center">
-      <CodeIcon class="mx-2 size-7" />
+      <CodeIcon class="mx-2 size-7" aria-label="" />
       <p>Eduardo Valencia</p>
     </div>
     <nav class="hidden md:flex items-center mx-16">
-      <SocialPill href="https://www.instagram.com/eduardovg_">
-        <InstagramIcon class="size-3 mx-2" alt="Instagram"/>
+      <SocialPill href="https://www.instagram.com/eduardovg_" label="Instagram">
+        <InstagramIcon class="size-3 mx-2" />
         Instagram
       </SocialPill>
 
-      <SocialPill href="https://github.com/Obskurath/">
-        <GitHubIcon class="size-3 mx-2" alt="GitHub"/>
+      <SocialPill href="https://github.com/Obskurath/" label="GitHub">
+        <GitHubIcon class="size-3 mx-2" />
         GitHub
       </SocialPill>
 
-      <SocialPill href="https://www.linkedin.com/">
-        <LinkedInIcon class="size-3 mx-2" alt="LinkedIn"/>
+      <SocialPill href="https://www.linkedin.com/" label="LinkedIn">
+        <LinkedInIcon class="size-3 mx-2" />
         LinkedIn
       </SocialPill>
     </nav>
