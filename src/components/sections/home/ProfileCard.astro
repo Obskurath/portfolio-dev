@@ -1,0 +1,23 @@
+---
+import ProfileInfo from "./ProfileInfo.astro";
+import ContactInfo from "./ContactInfo.astro";
+import SkillBadges from "./SkillBadges.astro";
+import ButtonCV from "./ButtonCV.astro";
+---
+
+<div
+  class="info_banner relative h-fit rounded-tl-[100px] rounded-br-[100px] p-4 min-w-60 justify-center items-center border-white border-[3px] mb-10 mx-auto xl:mx-0"
+>
+  <div
+    class="absolute top-[-6px] left-[-6px] inset-0 border-t-[4px] border-l-[4px] border-[#12F7D6] rounded-tl-[101px] z-0 pointer-events-none"
+  >
+  </div>
+  <ProfileInfo
+    name="Eduardo"
+    role="Front-End Developer"
+    imageUrl="img/profile.webp"
+  />
+  <ContactInfo />
+  <SkillBadges />
+  <ButtonCV />
+</div>
