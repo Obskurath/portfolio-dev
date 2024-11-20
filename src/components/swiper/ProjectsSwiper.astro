@@ -1,0 +1,73 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+import { projects } from "./projects";
+
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  github?: string;
+  demo?: string;
+}
+---
+
+<div class="w-full max-w-6xl px-4 py-8">
+  <swiper-container
+    slides-per-view="1"
+    navigation="true"
+    pagination="true"
+    centered-slides="true"
+    space-between="15"
+    breakpoints='{"640":{"slidesPerView":1},"1024":{"slidesPerView":3}}'
+    class="!py-4"
+  >
+    {projects.map((project: Project) => (
+      <swiper-slide>
+        <ProjectCard {...project} />
+      </swiper-slide>
+    ))}
+  </swiper-container>
+</div>
+
+<script>
+  import { register } from 'swiper/element/bundle';
+  register();
+</script>
+
+<style>
+  swiper-container {
+    --swiper-theme-color: #12F7D6;
+    --swiper-navigation-size: 24px;
+    --swiper-pagination-bottom: -5px;
+    --swiper-navigation-sides-offset: 20px; /* Add space from sides */
+    padding: 2rem 0rem; /* Increased horizontal padding */
+  }
+
+  swiper-slide {
+    height: auto;
+  }
+
+  swiper-container::part(button-prev),
+  swiper-container::part(button-next) {
+    color: #12F7D6;
+  }
+
+  /* Optional: Specific positioning for each arrow */
+  swiper-container::part(button-prev) {
+    left: 0;
+  }
+
+  swiper-container::part(button-next) {
+    right: 0;
+  }
+
+  swiper-container::part(bullet) {
+    background-color: white;
+    opacity: 0.5;
+  }
+
+  swiper-container::part(bullet-active) {
+    background-color: #12F7D6;
+    opacity: 1;
+  }
+</style>
