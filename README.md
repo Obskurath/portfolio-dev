@@ -89,7 +89,7 @@ Located in `src/components/swiper/`:
 - **projects.ts**: Project data configuration
 
 ```typescript
-// Example [projects.ts](http://_vscodecontentref_/1) structure:
+// Example [projects.ts] structure:
 export const projects = [
   {
     title: "SoundHub Discord Bot",
