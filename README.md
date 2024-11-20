@@ -136,5 +136,9 @@ Check for:
 - **GitHub**: [Obskurath](https://github.com/Obskurath)
 - **LinkedIn**: [Eduardo Valencia](https://www.linkedin.com/in/eduardo-valencia)
 
+## 🤝 Contributing
+
+Special thanks to [Johann Leon](https://dribbble.com/johannleon2025) for the design.
+
 ## 📄 License
 This project is open-source and available under the [MIT License](LICENSE).
