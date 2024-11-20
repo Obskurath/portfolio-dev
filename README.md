@@ -82,6 +82,24 @@ Preview the production build locally:
 - **Layout Components**: Layout elements in the `layout` folder.
 - **Sections**: Various page sections in the `sections` folder.
 
+#### Swiper Implementation
+Located in `src/components/swiper/`:
+- **ProjectsSwiper.astro**: Main swiper component that displays project cards
+- **ProjectCard.astro**: Individual project card component
+- **projects.ts**: Project data configuration
+
+```typescript
+// Example [projects.ts](http://_vscodecontentref_/1) structure:
+export const projects = [
+  {
+    title: "SoundHub Discord Bot",
+    description: "A feature-rich Discord bot that plays music from YouTube.",
+    image: "/img/soundhub.png",
+    github: "https://github.com/yourusername/soundhub"
+  },
+  // ...more projects
+];
+```
 
 ### Icons
 SVG icons like:
