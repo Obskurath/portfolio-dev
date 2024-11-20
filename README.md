@@ -1,7 +1,9 @@
 ### Eduardo Valencia's Portfolio
-Welcome to my personal portfolio website built with Astro and Tailwind CSS. This project showcases my work, skills, and experience in web development and design.
+
+Welcome to my personal portfolio website, built with **Astro** and **Tailwind CSS**. This project highlights my work, skills, and experience in web development and design.
 
 ---
+
 ## 🚀 Project Structure
 /
 ├── public/
@@ -31,45 +33,97 @@ Welcome to my personal portfolio website built with Astro and Tailwind CSS. This
 ├── tailwind.config.mjs
 ├── tsconfig.json
 ├── package.json
-└── README.md
+└── README.md.json └── README.md
+
 
 ## 🛠 Technologies Used
-- Astro: Modern static site builder.
-- Tailwind CSS: Utility-first CSS framework.
-- TypeScript: For type safety.
-- Fontsource: Self-hosted fonts.
-- Vercel: Deployment platform.
+- **Astro**: Static site builder
+- **Tailwind CSS**: Utility-first CSS framework
+- **TypeScript**: Type safety
+- **Fontsource**: Self-hosted fonts
+- **Vercel**: Deployment platform
 
 ### 📦 Installation
 1. Clone the repository:
-```bash
-git clone https://github.com/Obskurath/portfolio-dev.git
-cd portfolio-dev
-```
+    ```bash
+    git clone https://github.com/Obskurath/portfolio-dev.git
+    cd portfolio-dev
+    ```
 2. Install dependencies:
-```bash
-npm install
-```
+    ```bash
+    npm install
+    ```
 
-# 🚀 Development
+### 🚀 Development
 Start the development server:
+    ```bash
+    npm run dev
+    ```
+The site will be available at [http://localhost:4321](http://localhost:4321).
+
+### 🏗️ Production Build
+Build the project for production:
+    ```bash
+    npm run build
+    ```
+This generates static assets in the `dist` directory.
+
+### 🔍 Previewing the Build
+Preview the production build locally:
+    ```bash
+    npm run preview
+    ```
+
+## 📁 Project Details
+
+### Components
+- **Common Components**: Reusable elements located in the `common` folder.
+- **Layout Components**: Layout elements in the `layout` folder.
+- **Sections**: Various page sections in the `sections` folder.
+
+### Icons
+SVG icons like:
+- `About.astro`
+- `GitHub.astro`
+- `LinkedIn.astro`
+
+### Pages
+The main page, `index.astro`, imports various sections:
 ```bash
-npm run dev
+import Layout from "@layouts/Layout.astro";
+import HomeSection from "@components/sections/HomeSection.astro";
+import AboutMeSection from "@components/sections/AboutMeSection.astro";
+import SkillsSection from "@components/sections/SkillsSection.astro";
+import ProjectsSection from "@components/sections/ProjectsSection.astro";
+import ContactSection from "@components/sections/ContactSection.astro";
 ```
-The site will be available at http://localhost:4321
+### 🎨 Styling and Fonts
+- **Tailwind CSS**: Configured in `tailwind.config.mjs`.
+- **Fonts**: Using IBM Plex Mono and Ubuntu via `@fontsource`.
 
-## 🏗️ Production Build
-To build the project for production:
-```bash
-npm run build
-``` 
-This will generate static assets in the dist directory.
+### 🌐 Deployment
+Deployed on **Vercel**, with automatic deployments triggered by pushes to the `main` branch.
 
-## 🔍 Previewing the Build
-To preview the production build locally:
-```bash
-npm run preview
-``` 
+### 🐞 Troubleshooting
+Check for:
+- **Missing Props**: Ensure all required props are passed to components.
+- **Unused Imports**: Remove any unused imports.
+- **Type Errors**: Run `astro check` to find and fix TypeScript issues.
 
-# 📁 Project Details
-###
+### 🧞 Commands Reference
+| Command                | Action                                      |
+|------------------------|---------------------------------------------|
+| `npm install`          | Installs dependencies                       |
+| `npm run dev`          | Starts local dev server at `localhost:4321` |
+| `npm run build`        | Builds the production site to `dist`        |
+| `npm run preview`      | Previews the build locally before deploying |
+| `npm run astro ...`    | Runs Astro CLI commands                     |
+| `npm run astro -- --help` | Displays help for the Astro CLI          |
+
+### 📫 Contact
+- **Email**: [EduardoVG@proton.me](mailto:EduardoVG@proton.me)
+- **GitHub**: [Obskurath](https://github.com/Obskurath)
+- **LinkedIn**: [Eduardo Valencia](https://www.linkedin.com/in/eduardo-valencia)
+
+### 📄 License
+This project is open-source and available under the [MIT License](LICENSE).
