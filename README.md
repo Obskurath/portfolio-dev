@@ -2,7 +2,6 @@
 
 Welcome to my personal portfolio website, built with **Astro** and **Tailwind CSS**. This project highlights my work, skills, and experience in web development and design.
 
----
 
 ## 🚀 Project Structure
 ```
