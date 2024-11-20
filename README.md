@@ -5,6 +5,7 @@ Welcome to my personal portfolio website, built with **Astro** and **Tailwind CS
 ---
 
 ## 🚀 Project Structure
+```
 /
 ├── public/
 │   └── img/
@@ -33,7 +34,8 @@ Welcome to my personal portfolio website, built with **Astro** and **Tailwind CS
 ├── tailwind.config.mjs
 ├── tsconfig.json
 ├── package.json
-└── README.md.json └── README.md
+└── README.md
+```
 
 
 ## 🛠 Technologies Used
