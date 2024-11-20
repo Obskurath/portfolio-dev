@@ -128,12 +128,12 @@ Check for:
 | `npm run astro ...`    | Runs Astro CLI commands                     |
 | `npm run astro -- --help` | Displays help for the Astro CLI          |
 
----
-### 📫 Contact
+
+## 📫 Contact
 - **Email**: [EduardoVG@proton.me](mailto:EduardoVG@proton.me)
 - **GitHub**: [Obskurath](https://github.com/Obskurath)
 - **LinkedIn**: [Eduardo Valencia](https://www.linkedin.com/in/eduardo-valencia)
 
----
-### 📄 License
+
+## 📄 License
 This project is open-source and available under the [MIT License](LICENSE).
