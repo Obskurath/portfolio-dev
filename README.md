@@ -83,11 +83,13 @@ Preview the production build locally:
 - **Layout Components**: Layout elements in the `layout` folder.
 - **Sections**: Various page sections in the `sections` folder.
 
+
 ### Icons
 SVG icons like:
 - `About.astro`
 - `GitHub.astro`
 - `LinkedIn.astro`
+
 
 ### Pages
 The main page, `index.astro`, imports various sections:
@@ -99,18 +101,22 @@ import SkillsSection from "@components/sections/SkillsSection.astro";
 import ProjectsSection from "@components/sections/ProjectsSection.astro";
 import ContactSection from "@components/sections/ContactSection.astro";
 ```
+
 ### 🎨 Styling and Fonts
 - **Tailwind CSS**: Configured in `tailwind.config.mjs`.
 - **Fonts**: Using IBM Plex Mono and Ubuntu via `@fontsource`.
 
+
 ### 🌐 Deployment
 Deployed on **Vercel**, with automatic deployments triggered by pushes to the `main` branch.
+
 
 ### 🐞 Troubleshooting
 Check for:
 - **Missing Props**: Ensure all required props are passed to components.
 - **Unused Imports**: Remove any unused imports.
 - **Type Errors**: Run `astro check` to find and fix TypeScript issues.
+
 
 ### 🧞 Commands Reference
 | Command                | Action                                      |
@@ -122,10 +128,12 @@ Check for:
 | `npm run astro ...`    | Runs Astro CLI commands                     |
 | `npm run astro -- --help` | Displays help for the Astro CLI          |
 
+---
 ### 📫 Contact
 - **Email**: [EduardoVG@proton.me](mailto:EduardoVG@proton.me)
 - **GitHub**: [Obskurath](https://github.com/Obskurath)
 - **LinkedIn**: [Eduardo Valencia](https://www.linkedin.com/in/eduardo-valencia)
 
+---
 ### 📄 License
 This project is open-source and available under the [MIT License](LICENSE).
