@@ -136,3 +136,7 @@ Check for:
 
 ## 📄 License
 This project is open-source and available under the [MIT License](LICENSE).
+
+## 📸 Preview
+
+![Project Screenshot](public/img/project-screenshot.png)
