@@ -71,9 +71,9 @@ This generates static assets in the `dist` directory.
 
 ### 🔍 Previewing the Build
 Preview the production build locally:
-    ```
-    npm run preview
-    ```
+```bash
+npm run preview
+```
 
 ## 📁 Project Details
 
