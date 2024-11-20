@@ -11,15 +11,15 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
-    "@astrojs/preact": "^3.5.1",
-    "@astrojs/tailwind": "^5.1.0",
-    "@fontsource/ibm-plex-mono": "^5.0.12",
-    "@fontsource/ubuntu": "^5.0.13",
-    "astro": "^4.16.7",
-    "preact": "^10.23.1",
+    "@astrojs/preact": "^3.5.3",
+    "@astrojs/tailwind": "^5.1.2",
+    "@fontsource/ibm-plex-mono": "^5.1.0",
+    "@fontsource/ubuntu": "^5.1.0",
+    "astro": "^4.16.13",
+    "preact": "^10.24.3",
     "swiper": "^11.1.15",
-    "tailwindcss": "^3.4.3",
-    "typescript": "^5.4.5"
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.3"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.15"
