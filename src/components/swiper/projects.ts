@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "SoundHub Discord Bot",
     description: "A feature-rich Discord bot that plays music from YouTube.",
-    image: "/img/project1.png",
+    image: "/img/soundhub.png",
     github: "https://github.com/Obskurath/soundhub",
   },
   {
@@ -15,7 +15,7 @@ export const projects = [
   {
     title: "React Portfolio Website",
     description: "A personal portfolio website built with React and Tailwind CSS.",
-    image: "/img/project1.png",
+    image: "/img/soundhub.png",
     github: "",
     demo: "https://portfolio-dev-eight-gamma.vercel.app"
 
@@ -23,7 +23,7 @@ export const projects = [
   {
     title: "Banking App UI",
     description: "A banking app UI concept built with React Native.",
-    image: "/img/project1.png",
+    image: "/img/project-screenshot.png",
     demo: "https://portfolio-dev-eight-gamma.vercel.app",
     github: "https://github.com/Obskurath/portfolio-dev",
 
@@ -33,7 +33,7 @@ export const projects = [
   {
     title: "E-commerce Website",
     description: "An e-commerce website built with Next.js and Tailwind CSS.",
-    image: "/img/project1.png",
+    image: "/img/soundhub.png",
     github: "",
     demo: ""
   }
