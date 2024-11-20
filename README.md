@@ -46,32 +46,32 @@ Welcome to my personal portfolio website, built with **Astro** and **Tailwind CS
 
 ## 📦 Installation
 1. Clone the repository:
-    ```bash
+    ```
     git clone https://github.com/Obskurath/portfolio-dev.git
     cd portfolio-dev
     ```
 2. Install dependencies:
-    ```bash
+    ```
     npm install
     ```
 
 ### 🚀 Development
 Start the development server:
-    ```bash
+    ```
     npm run dev
     ```
 The site will be available at [http://localhost:4321](http://localhost:4321).
 
 ### 🏗️ Production Build
 Build the project for production:
-    ```bash
+    ```
     npm run build
     ```
 This generates static assets in the `dist` directory.
 
 ### 🔍 Previewing the Build
 Preview the production build locally:
-    ```bash
+    ```
     npm run preview
     ```
 
