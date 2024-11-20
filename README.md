@@ -45,7 +45,7 @@ Welcome to my personal portfolio website, built with **Astro** and **Tailwind CS
 - **Fontsource**: Self-hosted fonts
 - **Vercel**: Deployment platform
 
-### 📦 Installation
+## 📦 Installation
 1. Clone the repository:
     ```bash
     git clone https://github.com/Obskurath/portfolio-dev.git
@@ -118,7 +118,7 @@ Check for:
 - **Type Errors**: Run `astro check` to find and fix TypeScript issues.
 
 
-### 🧞 Commands Reference
+## 🧞 Commands Reference
 | Command                | Action                                      |
 |------------------------|---------------------------------------------|
 | `npm install`          | Installs dependencies                       |
