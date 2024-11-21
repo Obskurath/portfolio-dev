@@ -48,16 +48,16 @@ class="rounded-full transition-all ease-in duration-[200ms] hover:bg-white hover
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll("nav a");
 
-    let isClickActive = false; // Variable de control
-    let lastScrollY = window.scrollY; // Para detectar la dirección del scroll
+    let isClickActive = false; // Control variable
+    let lastScrollY = window.scrollY; // To detect the scroll direction
 
-    // Función para activar un ícono específico
+    // Function to activate a specific icon
     function activateIcon(link: HTMLAnchorElement) {
       navLinks.forEach((navLink) => navLink.classList.remove("active"));
       link.classList.add("active");
     }
 
-    // Función para activar el ícono de Home
+    // Function to activate the Home icon
     function activateHomeIcon() {
       if (!isClickActive) {
         activateIcon(
@@ -66,7 +66,7 @@ class="rounded-full transition-all ease-in duration-[200ms] hover:bg-white hover
       }
     }
 
-    // Verifica la posición inicial del scroll
+    // Check the initial scroll position
     if (window.scrollY === 0) {
       activateHomeIcon();
     }
@@ -111,20 +111,20 @@ class="rounded-full transition-all ease-in duration-[200ms] hover:bg-white hover
           }
         }
       },
-      { threshold: [0.5] } // Umbral ajustado para una transición más rápida
+      { threshold: [0.5] } // Adjusted threshold for a faster transition
     );
 
     sections.forEach((section) => {
       observer.observe(section);
     });
 
-    // Evento de scroll para detectar la parte superior de la página
+    // Scroll event to detect the top of the page
     window.addEventListener("scroll", () => {
       if (window.scrollY === 0) {
         activateHomeIcon();
       }
 
-      // Verificar la dirección del scroll
+      // Check the scroll direction
       if (!isClickActive) {
         requestAnimationFrame(() => {
           const currentScrollY = window.scrollY;
@@ -138,20 +138,20 @@ class="rounded-full transition-all ease-in duration-[200ms] hover:bg-white hover
       }
     });
 
-    // Evento de clic para activar el ícono manualmente
+    // Click event to manually activate the icon
     navLinks.forEach((link) => {
       link.addEventListener("click", () => {
         isClickActive = true; // Activación por clic
         activateIcon(link as HTMLAnchorElement);
 
-        // Desactivar el control después de un breve tiempo para permitir la activación por scroll nuevamente
+        // Deactivate control after a short time to allow activation by scroll again
         setTimeout(() => {
           isClickActive = false;
-        }, 500); // Ajuste del tiempo de control para una transición más suave
+        }, 500); // Adjust the control time for a smoother transition
       });
     });
 
-    // Forzar la observación inmediata de las secciones por si alguna es visible
+    // Force immediate observation of sections in case any are visible
     observer.takeRecords();
   });
 </script>
