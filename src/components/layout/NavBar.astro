@@ -1,24 +1,46 @@
 ---
-import Home from "@components/layout/navbar/Home.astro";
-import About from "@components/layout/navbar/About.astro";
-import Skills from "@components/layout/navbar/Skills.astro";
-import Projects from "@components/layout/navbar/Projects.astro";
-import Contact from "@components/layout/navbar/Contact.astro";
+import Home from "@icons/HomeIcon.astro";
+import About from "@icons/AboutIcon.astro";
+import Skills from "@icons/SkillsIcon.astro";
+import Projects from "@icons/ProjectsIcon.astro";
+import Mail from "@icons/Mail.astro";
+
 ---
 
 <nav
   class="hidden lg:flex flex-col fixed h-fit w-fit bg-[#1A1E23] top-[20%] left-[3%] z-50 rounded-full px-2 py-2 grid gap-5 gap-y-3 border-[1px] "
 >
-  <Home />
-  
-  <About />
-  
-  <Skills />
-  
-  <Projects />
+<a
+href="#top"
+class="rounded-full transition-all ease-in duration-[200ms] hover:bg-white hover:text-black"
+>
+<Home class="size-7 p-[7px]" aria-label="Home"/>
+</a>
+<a
+href="#about"
+class="rounded-full transition-all ease-in duration-[200ms] hover:bg-white hover:text-black"
+>
+<About class="size-7 p-[7px]" aria-label="About Me"/>
+</a>
+<a
+href="#skills"
+class="rounded-full transition-all ease-in duration-[200ms] hover:bg-white hover:text-black"
+>
+<Skills class="size-7 p-[7px]" aria-label="Skills"/>
+</a>
+<a
+href="#projects"
+class="rounded-full transition-all ease-in duration-[200ms] hover:bg-white hover:text-black"
+>
+<Projects class="size-7 p-[7px]" aria-label="Projects"/>
+</a>
+<a
+href="#contact"
+class="rounded-full transition-all ease-in duration-[200ms] hover:bg-white hover:text-black"
+>
+<Mail class="size-7 p-[7px]" aria-label="Contact Me"/>
+</a>
 
-  <Contact />
-  
 </nav>
 
 <script>
