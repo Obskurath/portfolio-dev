@@ -147,7 +147,7 @@ Check for:
 
 ## 📸 Preview
 
-![Project Screenshot](public/img/project-screenshot.png)
+![Project Screenshot](public/img/project-screenshot.webp)
 
 ## 📫 Contact
 - **Email**: [EduardoVG@proton.me](mailto:EduardoVG@proton.me)
