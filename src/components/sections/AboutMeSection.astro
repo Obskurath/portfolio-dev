@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import About from "@assets/about.png"
+
 import P from "@icons/P.astro";
 import P_ from "@icons/P_.astro";
 
@@ -49,11 +52,11 @@ style="background-image: url('/img/about-bg.svg');"
       <P_ class="my-2 mt-3" />
     </div>
   </div>
-  <img
-    src="/img/about.webp"
+  <Image
+    src={About}
     alt="About Me"
+    format="avif"
     class="aspect-[320/400] w-[280px] h-auto  pb-20 my-6"
-    loading="lazy"
   />
 </div>
 </section>
