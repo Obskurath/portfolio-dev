@@ -1,4 +1,12 @@
-<div class="flex gap-x-5">
-  <p class="text-4xl pl-4 text-[#12F7D6] font-bold">{Astro.props.number}</p>
-  <p class="text-sm text-wrap">{Astro.props.text}</p>
+---
+interface Props {
+  number : number
+  text : string
+}
+
+const { number, text } = Astro.props as Props;
+---
+<div class="flex gap-x-6">
+  <p class="text-4xl pl-4 text-[#12F7D6] font-bold">{number}</p>
+  <p class="text-sm text-wrap">{text}</p>
 </div>
