@@ -2,7 +2,7 @@
 import Line2 from "@icons/Line2.astro";
 import Send from "@icons/Send.astro";
 
-const formspreeUrl = import.meta.env.FORMSPREE_URL;
+const formspreeUrl = import.meta.env.PUBLIC_FORMSPREE_URL;
 ---
 
 <section
@@ -74,14 +74,14 @@ const formspreeUrl = import.meta.env.FORMSPREE_URL;
       document.addEventListener("DOMContentLoaded", function () {
         const button = document.querySelector('button[type="submit"]');
         const inputs = document.querySelectorAll(
-          "input[required], textarea[required]"
+          "input[required], textarea[required]",
         );
 
         function checkInputs() {
           const allFilled = Array.from(inputs).every(
             (input) =>
               (input as HTMLInputElement | HTMLTextAreaElement).value.trim() !==
-              ""
+              "",
           );
           if (allFilled) {
             if (button) {
